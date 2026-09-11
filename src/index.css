@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  .dark {
+    color-scheme: dark;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Inter', 'Noto Naskh Arabic', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(16, 185, 129, 0.3);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(16, 185, 129, 0.5);
+  }
+  .dark ::-webkit-scrollbar-thumb {
+    background: rgba(16, 185, 129, 0.4);
+  }
+}
+
+@layer utilities {
+  .font-quran {
+    font-family: 'Amiri', 'Scheherazade New', serif;
+  }
+  .quran-text {
+    font-family: 'Amiri', 'Scheherazade New', serif;
+    line-height: 2.6;
+    font-size: 1.75rem;
+    word-spacing: 0.15em;
+  }
+  .quran-text-large {
+    font-family: 'Amiri', 'Scheherazade New', serif;
+    line-height: 2.8;
+    font-size: 2rem;
+    word-spacing: 0.2em;
+  }
+  .shimmer-bg {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+  }
+  .dark .shimmer-bg {
+    background: linear-gradient(90deg, #333 25%, #2a2a2a 50%, #333 75%);
+    background-size: 200% 100%;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .ayah-highlight {
+    background: linear-gradient(90deg, rgba(16,185,129,0.15), rgba(245,158,11,0.1));
+    border-radius: 8px;
+  }
+  .gold-border {
+    border-image: linear-gradient(135deg, #f59e0b, #fcd34d, #f59e0b) 1;
+  }
+  .glass {
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+  }
+}
